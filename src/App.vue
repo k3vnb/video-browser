@@ -9,7 +9,7 @@
 <script>
   import axios from 'axios';
   import SearchBar from './components/SearchBar';
-  const API_KEY = xxx;
+  const API_KEY = require('./../env').apiKey;;
   //input api key above;
 
   export default {
