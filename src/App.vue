@@ -20,14 +20,14 @@
     },
     methods: {
       onTermChange(searchTerm){
-        axios.get('https://googleapis.com/youtube/v3/search', {
+        axios.get('https://www.googleapis.com/youtube/v3/search', {
           params: {
             key: API_KEY,
             type: 'video',
             part: 'snippet',
             q: searchTerm
           }
-        }).then(response => console.log(response))
+        }).then(response => console.log(response));
       }
       // can also be seen as onTermChange: function(searchTerm){};
       // searchTerm is the second arg from onInput, aka event.target.value;
