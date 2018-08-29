@@ -1,12 +1,17 @@
 <template>
   <div class="container">
+    <div class="jumbotron">
+      <h1>YouTube Viewer</h1>
+    </div>
     <SearchBar
       v-on:termChange="onTermChange">
     </SearchBar>
-    <VideoDetail v-bind:video="selectedVideo" ></VideoDetail>
-    <VideoList
+    <div class="row">
+      <VideoDetail v-bind:video="selectedVideo"  />
+      <VideoList
       @videoSelect="onVideoSelect" v-bind:videos="videos">
-    </VideoList>
+      </VideoList>
+    </div>
 
   </div>
   <!-- it is also ok to write as <SearchBar @termChange="onTermChange">... v-bind:videos="videos" can also be written as :videos="videos" -->
@@ -57,3 +62,8 @@
     }
   };
 </script>
+<style scoped>
+  .jumbotron {
+    text-align: center;
+  }
+</style>
